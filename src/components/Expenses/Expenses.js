@@ -2,17 +2,19 @@ import React, { useState } from "react";
 
 import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
-import ExpensesFilter from "../ExpensesFilter/ExpensesFilter";
+import ExpensesFilter from "./ExpensesFilter";
 import Card from "../UI/Card";
 
 function Expenses(props) {
+  const [enteredYear, setEnteredYear] = useState("2023");
+
   const changeYearHandler = (enteredYear) => {
-    console.log(enteredYear);
+    setEnteredYear(enteredYear);
   } 
 
   return (
       <Card className="expenses">
-      <ExpensesFilter onChangeYear={changeYearHandler} />
+      <ExpensesFilter selected={enteredYear} onChangeYear={changeYearHandler} />
         <ExpenseItem
           title={props.expensesList[0].title}
           amount={props.expensesList[0].amount}
