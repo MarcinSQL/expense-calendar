@@ -32,9 +32,11 @@ const DUMMY_EXPENSES = [
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
-  const addExpenseHandler = expense => {
-    setExpenses([expense, ...DUMMY_EXPENSES]);
-  }
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+  };
 
   //React code
 
@@ -53,6 +55,6 @@ const App = () => {
       <Expenses expensesList={expenses} />
     </div>
   );
-}
+};
 
 export default App;
