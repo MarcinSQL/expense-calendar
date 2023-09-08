@@ -23,6 +23,10 @@ function Expenses(props) {
   //   filterInfoText = "2020, 2021, 2022 & 2023";
   // }
 
+  const filteredExpenses = props.expensesList.filter(expense => {
+    return expense.date.getFullYear().toString() === enteredYear;
+  });
+
   const changeYearHandler = (enteredYear) => {
     setEnteredYear(enteredYear);
   };
@@ -31,8 +35,9 @@ function Expenses(props) {
     <Card className="expenses">
       <ExpensesFilter selected={enteredYear} onChangeYear={changeYearHandler} />
       {/* <p>Data for years {filterInfoText} is hidden.</p> */}
-      {props.expensesList.map((expense) => (
+      {filteredExpenses.map((expense) => (
         <ExpenseItem
+          key={expense.id}
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
