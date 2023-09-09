@@ -13,21 +13,21 @@ const NewExpense = (props) => {
     props.onAddExpense(expenseData);
   };
 
-  const displayForm = () => {
+  const displayFormHandler = () => {
     setDisplayedForm(true);
   };
 
-  const hiddingForm = (value) => {
+  const hiddingFormHandler = (value) => {
     setDisplayedForm(value);
   };
 
   return (
     <div className="new-expense">
       {displayedForm === false ? (
-        <button onClick={displayForm}>Add Expense</button>
+        <button onClick={displayFormHandler}>Add Expense</button>
       ) : (
         <ExpenseForm
-          onHiddingForm={hiddingForm}
+          onHiddingForm={hiddingFormHandler}
           onSaveExpenseData={saveExpenseDataHandler}
         />
       )}

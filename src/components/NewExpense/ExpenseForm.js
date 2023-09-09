@@ -55,7 +55,7 @@ function ExpenseForm(props) {
   //   }
   // };
 
-  const onCancelForm = () => {
+  const onCancelFormHandler = () => {
     props.onHiddingForm(false);
   };
 
@@ -112,7 +112,7 @@ function ExpenseForm(props) {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="button" onClick={onCancelForm}>
+        <button type="button" onClick={onCancelFormHandler}>
           Cancel
         </button>
         <button type="submit">Add Expense</button>
