@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.c8240e52.css",
-    "main.js": "/static/js/main.20e368b2.js",
-    "index.html": "/index.html",
-    "main.c8240e52.css.map": "/static/css/main.c8240e52.css.map",
-    "main.20e368b2.js.map": "/static/js/main.20e368b2.js.map"
+    "main.css": "/expense-calendar/static/css/main.c8240e52.css",
+    "main.js": "/expense-calendar/static/js/main.20e368b2.js",
+    "index.html": "/expense-calendar/index.html",
+    "main.c8240e52.css.map": "/expense-calendar/static/css/main.c8240e52.css.map",
+    "main.20e368b2.js.map": "/expense-calendar/static/js/main.20e368b2.js.map"
   },
   "entrypoints": [
     "static/css/main.c8240e52.css",
